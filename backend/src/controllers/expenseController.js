@@ -3,7 +3,7 @@ import Expense from "../models/expenseModel.js"
 
 export const createExpense = async (req, res) => {
             try {
-                        const { title, category, amount, date } = req.body;
+                        const { title, date } = req.body;
                         const dateString = date;
                         const [day, month, year] = dateString.split("/");
                         const dateObj = new Date(`${year}-${month}-${day}`);
@@ -56,7 +56,7 @@ export const getExpense = async (req, res) => {
                                     filter.category = category;
                         }
                         const expense = await Expense.find(filter);
-           
+
 
                         res.status(200).json({ expense })
             } catch (error) {
