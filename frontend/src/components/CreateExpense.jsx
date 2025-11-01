@@ -71,7 +71,7 @@ const CreateExpense = ({ existingExpense }) => {
                                                             <Typography align='center'>
                                                                         Add Expenses
                                                             </Typography>
-                                                            <TextField color='success' autoFocus value={expense.title} name='title' onChange={handleChange} label="Title" fullWidth placeholder='Enter your title' />
+                                                            <TextField color='error' autoFocus value={expense.title} name='title' onChange={handleChange} label="Title" fullWidth placeholder='Enter your title' />
                                                             <TextField value={expense.amount} name='amount' onChange={handleChange} label="Amount" type='number' placeholder=' Enter your Amount' />
                                                             <TextField
                                                                         select
