@@ -3,7 +3,7 @@ import Expense from "../models/expenseModel.js"
 
 export const createExpense = async (req, res) => {
             try {
-                        const { title, date } = req.body;
+                        const { title, category, amount, date } = req.body;
                         const dateString = date;
                         const [day, month, year] = dateString.split("/");
                         const dateObj = new Date(`${year}-${month}-${day}`);
